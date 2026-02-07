@@ -404,6 +404,7 @@ async function askQuestion() {
                         if (parsed.final && !fullText) {
                             fullText = parsed.text;
                         } else if (!parsed.final) {
+                            if (fullText) fullText += "\n\n";
                             fullText += parsed.text;
                         }
                     }
