@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+    <header id="toolbar">
+        <div class="toolbar-left">
+            <label id="upload-btn" for="file-input">Upload PDF</label>
+            <input type="file" id="file-input" accept=".pdf" hidden>
+            <select id="pdf-select">
+                <option value="">Select a PDF...</option>
+            </select>
+            <span id="status-indicator"></span>
+        </div>
+        <div class="toolbar-center" id="pdf-title"></div>
+        <div class="toolbar-right">
+            <button id="zoom-out" title="Zoom out">−</button>
+            <span id="zoom-level">100%</span>
+            <button id="zoom-in" title="Zoom in">+</button>
+        </div>
+    </header>
+
+    <div id="main">
+        <div id="pdf-panel">
+            <div id="drop-zone">
+                <div id="drop-message">
+                    <p>Drop a PDF here or click Upload</p>
+                </div>
+                <div id="pdf-container"></div>
+            </div>
+            <div id="page-nav">
+                <button id="prev-page">Prev</button>
+                <span id="page-info">Page 0 of 0</span>
+                <button id="next-page">Next</button>
+            </div>
+        </div>
+
+        <div id="qa-panel">
+            <div id="selection-display">
+                <div id="selection-label">Selected text:</div>
+                <div id="selection-text">(select text in the PDF)</div>
+            </div>
+            <div id="chat-history"></div>
+            <div id="question-box">
+                <textarea id="question-input" placeholder="Ask a question..." rows="2"></textarea>
+                <button id="ask-btn">Ask</button>
+                <button id="clear-btn" title="Clear chat">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/static/app.js"></script>
+</body>
+</html>
