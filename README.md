@@ -1,6 +1,6 @@
 # research
 
-Local PDF research tool. Drop in PDFs, they get chunked, embedded, and images extracted+described in the background. Then select text in the viewer and ask questions — answered by Claude Code searching the vector DB and surrounding context.
+PDF research tool. Drop in PDFs, they get chunked, embedded, and images extracted+described in the background. Then select text in the viewer and ask questions — answered by Claude Code searching the vector DB and surrounding context.
 
 ![screenshot](screenshot.png)
 
